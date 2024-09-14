@@ -1,12 +1,11 @@
 import random
 
-simvol = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+symbols = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 password_length = int(input("Введите желаемую длину пароля: "))
 password = ""
 
 for i in range(password_length):
-    password += random.choice(simvol)
-    random_index = random.randint(0, len(simvol) - 1)
-    password += simvol[random_index]
-   
-    print(password)
+    random_index = random.randint(0, len(symbols) - 1)
+    password += symbols[random_index]
+
+print("Сгенерированный пароль:", password)
